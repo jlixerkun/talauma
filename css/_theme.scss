@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "dosis";
+    src:url('../assets/fonts/Dosis/Dosis-Regular.ttf');
+}
+@font-face {
+    font-family: 'courgette';
+    src: url('../assets/fonts/Courgette/Courgette-Regular.ttf');
+}
+
+$theme: (
+    primary:    #058789,
+    dark:  #503D2E,
+    warm_accent:#D54B1A,
+    light_bg: #F0ECC9,
+    dark_bg:#E3A72F,
+);

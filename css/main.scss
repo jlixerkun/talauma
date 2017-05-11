@@ -1,0 +1,18 @@
+@import '_theme.scss';
+
+body, html {
+    padding: 0;
+    margin: 0;
+    $siteBg : map-get($theme ,'light_bg' );
+    background: $siteBg;
+}
+* {
+    font-family:'dosis';
+}
+.heading {
+    font-family: 'courgette';
+}
+
+header{
+    background-color: darken(map-get($theme , 'light_bg' ),10%);
+}
