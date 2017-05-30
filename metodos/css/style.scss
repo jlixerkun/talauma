@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Keania+One|Old+Standard+TT:400i|Quicksand');
+
+
+$headings:  'Keania One', cursive;
+$alltext:   'Quicksand', sans-serif;
+$mathtext:  'Old Standard TT', serif;
+
+$colors:(
+   darkcool:    #322938,
+   medium:      #89A194,
+   lite:        #CFC89A,
+   litewarm:    #CC883A,
+   darkwarm:    #A14016
+);
+
+
+body {
+    background: map-get($colors , 'lite' );
+    padding: 0;
+    margin:0;
+    margin-bottom: 4rem;
+}
+
+.wrapper {
+    width: 80%;
+    min-width: 300px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header#main-header {
+    background: map-get($colors , 'medium' );
+    padding: 4rem 0;
+    box-shadow: 0 0 0 2px map-get($colors , 'litewarm' );
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        
+
+    h1 {
+        color: map-get($colors , 'darkcool' );
+        text-shadow: 1px 1px 0 map-get($colors ,'lite');
+    }
+}
+
+.math{
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 0.8;
+    color: darken(map-get($colors , 'medium' ),30%);
+    * {
+        font-family: $mathtext;
+    }
+    font-family: $mathtext;
+}
+
+*{
+    font-family: $alltext;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $headings;
+    color: map-get($colors ,'darkwarm' );
+    text-shadow: 1px 1px 0 map-get($colors , 'medium' );
+}
+
+
+table.iteraciones {
+    font-size: 1.2rem;
+    margin:3rem 0;
+    width: 100%;
+    border: 1px solid #888;
+    border-collapse: collapse;
+    tr:nth-child(odd){
+        background: #dfdfdf;
+    }
+    tr:first-child{
+        background: #cacaca;
+    }
+    td, th {
+        border: 1px solid #888;
+        padding: 7px 2px 2px;
+        // font-size: 0.8rem;
+        &.true {
+            background: #ffff00;
+            color: red;
+            font-weight: bold;
+        }
+    }
+}
+#ecuacion {
+    span {
+        position: relative;
+        display: inline-block;
+    }
+    .hide-me {
+        display: none;
+        height: 2rem;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 100%;
+        text-align: center;
+        &.shown{
+            display: inline-block;
+        }
+    }
+}

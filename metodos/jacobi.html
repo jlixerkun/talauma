@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Jacobi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="import" href="assets/header.html">
+    </head>
+    <body>
+
+        <header id="main-header"></header>
+        <div class="wrapper">
+            <h1>Jacobi</h1>
+
+            <div id="ecuacion" class="math">
+                <p>
+                    <span id="B1">b<sub>1</sub></span>=
+                    <span id="a11">a<sub>11</sub></span>
+                    x<sub>1</sub>+
+                    <span id="a12">a<sub>12</sub></span>
+                    x<sub>2</sub>+
+                    <span id="a13">a<sub>13</sub></span>
+                    x<sub>3</sub> 
+                </p>
+                <p>
+                    <span id="B2">b<sub>2</sub></span>=
+                    <span id="a21">a<sub>21</sub></span>
+                    x<sub>1</sub>+
+                    <span id="a22">a<sub>22</sub></span>
+                    x<sub>2</sub>+
+                    <span id="a23">a<sub>23</sub></span>
+                    x<sub>3</sub> 
+                </p>
+                <p>
+                    <span id="B3">b<sub>3</sub></span>=
+                    <span id="a31">a<sub>31</sub></span>
+                    x<sub>1</sub>+
+                    <span id="a32">a<sub>32</sub></span>
+                    x<sub>2</sub>+
+                    <span id="a33">a<sub>33</sub></span>
+                    x<sub>3</sub> 
+                </p>
+            </div>
+            
+            <button type="" id="inicio">inicio</button>
+            <button type="" id="iterar">iterar</button>
+
+
+            <table class="iteraciones">
+                <tr>
+                    <th>iter</th>
+                    <th>x<sub>1</sub></th>
+                    <th>x<sub>2</sub></th>
+                    <th>x<sub>3</sub></th>
+                    <th>Ea(x<sub>1</sub>)</th>
+                    <th>Ea(x<sub>2</sub>)</th>
+                    <th>Ea(x<sub>3</sub>)</th>
+                </tr>
+            </table>    
+        </div>
+
+
+        <script>
+            var link = document.querySelector('link[rel="import"]');
+
+            // Clone the template in the import.
+            var template = link.import.querySelector('template');
+
+            var clone = document.importNode(template.content, true);
+
+            document.querySelector('#main-header').appendChild(clone);
+
+        </script>
+        <!-- <script src="https://unpkg.com/vue"></script>
+        <script src="vueJacobi.js"></script>-->
+        <script src="jacobi.js"></script>
+    </body>
+</html>

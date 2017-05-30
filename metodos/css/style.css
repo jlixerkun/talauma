@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Keania+One|Old+Standard+TT:400i|Quicksand");
+body {
+  background: #CFC89A;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4rem;
+}
+
+.wrapper {
+  width: 80%;
+  min-width: 300px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header#main-header {
+  background: #89A194;
+  padding: 4rem 0;
+  box-shadow: 0 0 0 2px #CC883A;
+}
+
+header#main-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header#main-header h1 {
+  color: #322938;
+  text-shadow: 1px 1px 0 #CFC89A;
+}
+
+.math {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 0.8;
+  color: #405148;
+  font-family: "Old Standard TT", serif;
+}
+
+.math * {
+  font-family: "Old Standard TT", serif;
+}
+
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Keania One", cursive;
+  color: #A14016;
+  text-shadow: 1px 1px 0 #89A194;
+}
+
+table.iteraciones {
+  font-size: 1.2rem;
+  margin: 3rem 0;
+  width: 100%;
+  border: 1px solid #888;
+  border-collapse: collapse;
+}
+
+table.iteraciones tr:nth-child(odd) {
+  background: #dfdfdf;
+}
+
+table.iteraciones tr:first-child {
+  background: #cacaca;
+}
+
+table.iteraciones td, table.iteraciones th {
+  border: 1px solid #888;
+  padding: 7px 2px 2px;
+}
+
+table.iteraciones td.true, table.iteraciones th.true {
+  background: #ffff00;
+  color: red;
+  font-weight: bold;
+}
+
+#ecuacion span {
+  position: relative;
+  display: inline-block;
+}
+
+#ecuacion .hide-me {
+  display: none;
+  height: 2rem;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 100%;
+  text-align: center;
+}
+
+#ecuacion .hide-me.shown {
+  display: inline-block;
+}
