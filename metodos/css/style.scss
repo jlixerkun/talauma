@@ -108,3 +108,42 @@ table.iteraciones {
         }
     }
 }
+
+.formEquation {
+    width: 100%;
+    .form-field {
+        input {
+            display: inline-block;
+        }
+    }
+}
+
+table.solucion {
+    width: 100%;
+    background: #fff;
+    // padding:0;
+    border-collapse: collapse;
+    border:1px solid map-get($colors ,'darkwarm' );
+    margin: 3rem 0 1rem;
+    th,td{
+        border: 1px solid map-get($colors ,'darkwarm' ) ;
+
+    }
+    
+    th:first-child, td:first-child {
+        width: 50px;
+    }
+    th:nth-child(2), td:nth-child(2) {
+        width: calc(50% - 25px);
+    }
+    
+    th:last-child, td:last-child {
+        width: calc(50% - 25px);
+    }
+}
+#grafica{
+    // width: 800px;
+    // height:300px;
+    background: #fff;
+
+}

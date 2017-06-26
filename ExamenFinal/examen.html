@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WG64W4F');</script>
+        <!-- End Google Tag Manager -->
+        <title>Examen Final</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../metodos/css/style.css" rel="stylesheet">
+        <link rel="import" href="../metodos/assets/header.html">
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-47042871-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG64W4F"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <header id="main-header"></header>
+        <div class="wrapper">
+            <h1>Solución numérica de EDO por método de Taylor (4 orden)</h1>
+
+<form name="equation" class="formEquation">
+    <div class="form-field">
+        <h3>Condición inicial</h3>
+        <!--Condición inicial-->
+        <label for="x0">Ingrese el valor de x<sub>0</sub>:</label>
+        <input type="text" name="x0" value="0" size="4">
+        <label for="y0">y<sub>0</sub>:</label>
+        <input type="text" name="y0" value="1" size="4">        
+    </div>
+
+    <div class="form-field">
+        <!--Valor del paso-->
+        <h3>Paso</h3>
+        <label for="h">Ingrese el valor del paso h:</label>
+        <input type="text" name="h" value="0.2" size="4">      
+    </div>
+
+    <div class="form-field">
+        <!--Intervalo de integración-->
+        <h3>Intervalo de integración</h3>
+        <label for="xa">Ingrese el valor de x<sub>a</sub>:</label>
+        <input type="text" name="xa" value="0" size="4">
+        <label for="xb">x<sub>b</sub>:</label>
+        <input type="text" name="xb" value="3" size="4">            
+    </div>
+
+    <div class="form-field">
+        <!--Ingresar ecuación -->
+        <h3>Ecuación</h3>
+        <label for="equat">Ingrese la ecuación: dy/dx=</label>
+        <input type="text" name="equat" value="x*y">
+    </div>
+
+    <div class="form-field">
+        <!--Ingresar derivada 1 -->
+        <h3>Primera derivada</h3>
+        <label for="deriv1">Ingrese la ecuación de la primera derivada:</label>
+        <input type="text" name="deriv1" value="y+(x*x*y)">
+    </div>
+
+    <div class="form-field">
+        <!--Ingresar derivada 2 -->
+        <h3>Segunda derivada</h3>
+        <label for="deriv2">Ingrese la ecuación de la segunda derivada:</label>
+        <input type="text" name="deriv2" value="((3*x)+(x*x*x))*y">
+    </div>
+
+    <div class="form-field">
+        <!--Ingresar derivada 3 -->
+        <h3>Tercera derivada</h3>
+        <label for="deriv3">Ingrese la ecuación de la tercera derivada:</label>
+        <input type="text" name="deriv3" value="(3+(6*x*x)+(x*x*x*x))*y">
+    </div>
+
+    <input type="button" value="Evaluar" onclick="evaluaFuncion(x0,y0)">
+    <input type="button" value="Limpiar" name="limpiar" onclick="clearAll()">
+</form>
+
+            <table class="solucion">
+                <thead>
+                    <tr>
+                        <th>iter</th>
+                        <th>x<sub>i</sub></th>
+                        <th>y<sub>i</sub></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+
+            <canvas id="grafica" width="800" height="300"></canvas>
+
+
+
+
+        </div>
+     <!--<script>
+        var link = document.querySelector('link[rel="import"]');
+        // Clone the template in the import.
+        var template = link.import.querySelector('template');
+        var clone = document.importNode(template.content, true);
+        document.querySelector('#main-header').appendChild(clone);
+    </script>-->
+
+    <script src="examen.js"></script>
+    </body>
+</html>
