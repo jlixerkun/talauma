@@ -59,7 +59,7 @@ function clearTable(){
 
 function writeTable(x,y,i){
     var fila = document.createElement('tr');
-    fila.innerHTML = `<td>${i}</td><td>${x}</td><td>${y}</td>`
+    fila.innerHTML = `<td>${i}</td><td>${x}</td><td>${y}</td>`;
     tablaSln.appendChild(fila);
 }
 
