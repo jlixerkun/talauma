@@ -33,6 +33,20 @@ input, select {
    }
    
 }
+   .row {
+      min-height: 150px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+         * {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 30vh;
+         }
+      }
    .center {
       display: flex;
       flex-direction: column;
@@ -51,9 +65,6 @@ input, select {
       }
       &.third {
          min-height: 30vh;
-      }
-      &.row {
-         flex-direction: row;
       }
    }
 
