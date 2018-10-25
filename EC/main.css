@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Gudea:700|Heebo:500|Montserrat");
+:root {
+  --blue: rgb(12, 0, 68);
+  --yellow: rgb(217, 255, 0);
+}
+
+body, html * {
+  font-family: "Montserrat", sans-serif;
+  background: #d9ff00;
+  color: #180762;
+}
+
+section {
+  width: 80vw;
+  max-width: 960px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+input[type="button"],
+input[type="file"] {
+  display: none;
+  background: #0c0044;
+}
+
+a.btn {
+  display: block;
+  width: 100%;
+  max-width: 608px;
+  margin: 0 auto;
+  text-align: center;
+  background: #0c0044;
+  color: #d9ff00;
+  text-decoration: none;
+  line-height: 32px;
+  margin: 16px auto;
+  border-radius: 4px;
+}
+
+a.btn:hover {
+  -webkit-transform: scale(0.99) translate3d();
+          transform: scale(0.99) translate3d();
+}
+
+h1, h2, h3 {
+  font-family: "Gudea", sans-serif;
+}
+/*# sourceMappingURL=main.css.map */

@@ -31,18 +31,33 @@
       <script>
          (function (i, s, o, g, r, a, m) {
          i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-         }, i[r].l = 1 * new Date(); a = s.createElement(o),
+               (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
             m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-         ga('create', 'UA-47042871-1', 'auto');
-         ga('send', 'pageview');</script>
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-47042871-1', 'auto');
+      ga('send', 'pageview');</script>
 </head>
 <body>
-   <div class="center treefourths ">
+      <i id="menuToggler"><a href="#">Menu</a></i>
+      <nav id="menu">
+            <ul id="menu-list">
+                  <li class="menu-item"><a href="#">Item 1</a></li>
+                  <li class="menu-item"><a href="#">Item 2</a></li>
+                  <li class="menu-item"><a href="#">Item 3</a></li>
+                  <li class="menu-item"><a href="#">Item 4</a></li>
+                  <li class="menu-item"><a href="#">Item 5</a></li>
+                  <li class="menu-item"><a href="#">Item 6</a></li>
+                  <li class="menu-item"><a href="#">Item 7</a></li>
+            </ul>
+      </nav>
+      <script>
+            
+            
+      </script>
+      <div class="center treefourths ">
       <div class="circlePic">
-         <img src="assets/img/profile.png" alt="este soy yo"> 
-
+            <img class="myPic" src="assets/img/profile.png" alt="este soy yo">
       </div>
    </div>
    
@@ -52,9 +67,11 @@
 
    </div>
    <div class="row">
-      <a href="mailto:jlixerkun@gmail.com?subject=Contacto desde jlixerkun.com">Email me!!</a> <a href="https://wa.me/573156252298">WhatsApp me!!</a>
+      <a class="btnGo" href="mailto:jlixerkun@gmail.com?subject=Contacto desde jlixerkun.com">Email me!!</a> 
+      <a class="btnGo" href="https://wa.me/573156252298">WhatsApp me!!</a>
    </div>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
