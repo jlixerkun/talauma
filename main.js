@@ -17,7 +17,7 @@ toggler.addEventListener('click',
       if(!menu.classList.contains('shown')){
          menu.classList.add('shown');
          // tl.to(menu, 1.5, { x: 23 + 'vw', ease: Elastic.easeOut.config(1, 0.5) });
-         tl.to(menu, 1.5, { x: 23 + 'vw', ease: Power3.easeOut});
+         tl.to(menu, .5, { x: -230, ease: Power3.easeOut});
       } else {
          menu.classList.remove('shown');
          tl.to(menu, 2, { x: 100 + 'vw' });
