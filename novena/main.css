@@ -5,8 +5,8 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url(https://fonts.googleapis.com/css?family=McLaren|Open+Sans:400,300|Source+Sans+Pro:400,300);
 @import url("https://fonts.googleapis.com/css?family=Satisfy|Krub|Dancing+Script|Cookie|Great+Vibes|Sacramento|Parisienne");
+@import url(https://fonts.googleapis.com/css?family=McLaren|Open+Sans:400,300|Source+Sans+Pro:400,300);
 html {
   line-height: 1.15;
   /* 1 */
@@ -436,7 +436,7 @@ header .title .subtitle {
 }
 
 .topnav {
-  background: inherit;
+  background: #20949b;
   margin: 0 -20px;
   position: absolute;
   z-index: 4;
@@ -511,6 +511,15 @@ header .title .subtitle {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1em;
+  max-width: 960px;
+  width: 80%;
+  margin: 0 auto 0.5em;
+  border-bottom: 1px solid #D74F33;
+}
+
+#mainMenu .menu-header .closeMenu img {
+  width: 30px;
+  height: 30px;
 }
 
 #mainMenu .menu-header h3 {
@@ -534,16 +543,42 @@ header .title .subtitle {
   padding: 0;
   margin: 0;
   text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #mainMenu .menu .menu-item {
   color: #DBD8A2;
-  width: 100%;
-  display: block;
-  padding: 8px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 16px 8px;
 }
 
-#mainMenu .menu .sub-menu {
+#mainMenu .menu .menu-item.heading {
+  pointer-events: none;
+}
+
+#mainMenu .menu .menu-item:hover {
+  background: rgba(30, 30, 30, 0.99);
+}
+
+#mainMenu .menu .menu-item img {
+  padding: 0 8px;
+  width: 30px;
+  height: 30px;
+}
+
+#mainMenu .menu .menu-item::after {
+  content: '';
+  background: #DBD8A2;
+  display: block;
+  height: 1px;
+  margin: 0 auto;
+  margin-top: 4px;
+  width: 80%;
+}
+
+#mainMenu .sub-menu {
   padding: 0;
   padding-right: 16px;
   display: -webkit-box;
@@ -555,19 +590,37 @@ header .title .subtitle {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px;
+  width: 80%;
+  margin: 0 auto;
 }
 
-#mainMenu .menu .sub-menu li {
-  width: 30%;
+#mainMenu .sub-menu li {
+  width: 100%;
 }
 
-#mainMenu .menu .sub-menu .sub-menu__item {
+#mainMenu .sub-menu .sub-menu__item {
   display: block;
-  padding: 16px;
+  font-size: 1em;
+  padding: 16px 8px;
   color: #cdc97d;
 }
 
-#mainMenu .menu .sub-menu .sub-menu__item::after {
+#mainMenu .sub-menu .sub-menu__item img {
+  width: 24px;
+  height: 24px;
+}
+
+#mainMenu .sub-menu .sub-menu__item:hover {
+  background: rgba(30, 30, 30, 0.99);
+}
+
+#mainMenu .sub-menu .sub-menu__item::after {
   content: '';
   background: #DBD8A2;
   display: block;
@@ -666,9 +719,22 @@ header .title .subtitle {
   margin-top: 2em;
 }
 
+#page .main-section .img-content {
+  width: 100%;
+  max-width: 860px;
+  margin: 1em auto;
+}
+
 @media (min-width: 769px) {
   #page .main-section {
     margin: 2em 15em;
+  }
+}
+
+@media (min-width: 1281px) {
+  #page .main-section .columnata {
+    -webkit-columns: 2;
+            columns: 2;
   }
 }
 
@@ -800,7 +866,56 @@ footer {
   width: 100%;
   margin: 2em 0 0;
   background: #DBD8A2;
-  min-height: 150px;
+  background-image: url("assets/pattern1.svg");
+  background-repeat: repeat;
+  min-height: 250px;
+}
+
+.main-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer-content__wrapper {
+  min-height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (max-width: 499px) {
+  .footer-content__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer-content__wrapper > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Parisienne", cursive;
+  font-size: 1.8em;
+  text-shadow: 0  0 10px #050531;
 }
 
 .liturgia:before {
@@ -811,8 +926,8 @@ footer {
   content: ')';
 }
 
-.silent-acknowledge {
-  display: none;
+.silent-acknowledge * {
+  font-size: 10px;
 }
 
 @media (max-width: 499px) {

@@ -1,6 +1,25 @@
 @import 'normalize';
-@import '../test/css/variables';
+// @import '../test/css/variables';
 @import url('https://fonts.googleapis.com/css?family=Satisfy|Krub|Dancing+Script|Cookie|Great+Vibes|Sacramento|Parisienne');
+//Colores
+$color0: #4B3E4D;
+$oscuro: #4B3E4D;
+$color1: #1E8C93;
+$frio: #1E8C93;
+$color2: #DBD8A2;
+$claro: #DBD8A2;
+$color3: #C4AC30;
+$claroMedio: #C4AC30;
+$color4: #D74F33;
+$acento: #D74F33;
+
+
+//Tipografía
+@import url(https://fonts.googleapis.com/css?family=McLaren|Open+Sans:400,300|Source+Sans+Pro:400,300);
+
+$mcLaren: 'McLaren', cursive;
+$openSans: 'Open Sans', sans-serif;
+$sourceSans: 'Source Sans Pro', sans-serif;
 
 // Fonts
 $running: 'Krub', sans-serif;
@@ -96,7 +115,7 @@ header {
 }
 
 .topnav {
-   background:inherit;
+   background:lighten($color1,2%);
    margin: 0 -20px;
    position: absolute;
    z-index: 4;
@@ -146,6 +165,16 @@ header {
       display: flex;
       justify-content: space-between;
       padding: 1em;
+      max-width: 960px;
+      width: 80%;
+      margin: 0 auto 0.5em;
+      border-bottom: 1px solid $acento;
+      .closeMenu{
+          img {
+              width: 30px;
+              height:30px;
+          }
+      }
       h3 {
          margin: 0;
       }
@@ -162,11 +191,34 @@ header {
       padding: 0;
       margin: 0;
       text-align: center;
+      transition: all 0.5s ease;
       .menu-item {
          color: $claro;
-         width: 100%;
-         display: block;
-         padding:8px 10px;
+         border-radius: 4px;
+        //  width: 100%;
+         display: inline-block;
+         padding:16px 8px;
+         &.heading {
+             pointer-events: none;
+         }
+         &:hover {
+             background: rgba(30,30,30,0.99);
+         }
+         img {
+             padding: 0 8px;
+             width: 30px;
+             height: 30px;
+         }
+         &::after {
+                content:'';
+                background: $claro;
+                display: block;
+                height: 1px;
+                margin: 0 auto;
+                margin-top: 4px;
+                width: 80%;
+            }
+        }
       }
       .sub-menu {
          padding: 0;
@@ -175,13 +227,28 @@ header {
          flex-wrap: wrap;
          justify-content: space-evenly;
          list-style-type: none;
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: 100px 100px 100px;
+         width:80%;
+         margin:  0 auto;
+
          li {
-            width: 30%;
+            width: 100%;
          }
          .sub-menu__item {
             display: block;
-            padding: 16px;
+            font-size: 1em;
+            padding: 16px 8px;
             color: darken($claro , 10%);
+            // font-family: $headings;
+            img {
+                width:  24px;
+                height: 24px;
+            }
+            &:hover {
+                background: rgba(30,30,30,0.99);
+            }
             &::after {
                content:'';
                background: $claro;
@@ -191,7 +258,11 @@ header {
                margin-top: 4px;
                width: 80%;
             }
-         } 
+
+            // &.dia {
+            //     opacity: 0;
+            // }
+
       }
    }
 }
@@ -264,9 +335,25 @@ header {
 
    .main-section {
       margin-top:2em;
+      
+      .img-content {
+          width: 100%;
+          max-width: 860px;
+          margin: 1em auto;
+      }
+
       @media (min-width:769px){
          margin: 2em 15em;
       }
+      @media (min-width:1281px) {
+          .columnata {
+              columns: 2
+
+          }
+      }
+      
+
+
       .main-section__title {
          margin: 0 -20px;
          @media (min-width:769px){
@@ -356,8 +443,39 @@ footer {
    width: 100%;
    margin: 2em 0 0;
    background: $claro;
-   min-height: 150px;
+   background-image: url('assets/pattern1.svg');
+   background-repeat: repeat;
+   min-height: 250px;
 }
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.footer-content__wrapper {
+    min-height: 240px;
+    display: flex;
+    justify-content: space-evenly;
+    @media (max-width:499px) {
+        flex-direction: column;
+    }
+    // &.w1 {
+    // }
+    // &.w2 {
+    // }
+    // &.w3 {
+    // }
+
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:$headings; 
+        font-size: 1.8em;
+        text-shadow: 0  0 10px #050531;
+    }
+    
+}   
 .liturgia {
    &:before{
       content:'(';
@@ -369,7 +487,11 @@ footer {
 // utilities
 
 .silent-acknowledge {
-   display: none;
+    *{
+        font-size: 10px;
+        // display: none;
+    }
+    
 }
 // @media (min-width:500px){
 // }

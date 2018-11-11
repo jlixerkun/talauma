@@ -1,4 +1,5 @@
 var toggler = document.getElementById('toggler');
+var closers = [...document.getElementsByClassName('closeMenu')];
 var menuItems = [...document.getElementsByClassName('menu-item')];
 const topOfNav = toggler.offsetTop;
 const mainMenu = document.getElementById('mainMenu');
@@ -14,17 +15,6 @@ Object.defineProperty(Element.prototype, 'documentOffsetTop', {
    }
 });
 
-// linker.addEventListener('click', function(e){
-//    // document.getElementById('oraciones').scrollIntoView();
-   
-//    var topElem = document.getElementById('oraciones').documentOffsetTop;
-//    if (window.scrollY > topElem) {
-//       window.scrollTo(0, topElem - 120);
-//    } else {
-//       window.scrollTo(0, topElem - 30);
-//    }
-//    e.preventDefault();
-// });
 
 links.forEach( link => link.addEventListener('click', function(e){
    var targetTop = document.getElementById(this.dataset.target).documentOffsetTop;
@@ -72,16 +62,10 @@ var imgs = [
       imageContainer.appendChild(image)
       gozos[i].appendChild(imageContainer);
    }
-// setTimeout(function () { 
-// }, 900);
 
 
 window.onscroll = function (e) {
-   // print "false" if direction is down and "true" if up
-   // console.log(this.oldScroll > this.scrollY);
    console.log(this.scrollY);
-   // this.oldScroll < this.scrollY ? header.classList.add('hide') : header.classList.remove('hide');
-   // document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
    this.oldScroll < this.scrollY ? hideHeader() : showHeader();
    this.oldScroll = this.scrollY;
 }
@@ -125,12 +109,6 @@ function includeHTML() {
 }
 includeHTML();
 
-// menuItems.forEach(item => item.addEventListener('click', function (e) {
-//    mainMenu.classList.toggle('visible');
-//    e.preventDefault();
-//    }
-// ));
-
 btmTogglers.forEach(toggler => toggler.addEventListener('click', function(e){
    var panelId = this.dataset.panel;
    document.getElementById(panelId).classList.toggle('visible');
@@ -141,3 +119,10 @@ toggler.addEventListener('click', function (e) {
    mainMenu.classList.toggle('visible');
    e.preventDefault();
 });  
+
+closers.forEach(closer => closer.addEventListener('click', function(e){
+    mainMenu.classList.toggle('visible');
+}));
+
+var elements = document.getElementsByClassName('.sub-menu__item.dia');
+
