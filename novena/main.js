@@ -9,12 +9,15 @@ var links = [...document.getElementsByClassName('inpage-link')];
 var btmTogglers = [...document.getElementsByClassName('slide-panel__toggle')];
 var linker = document.getElementById('orate');
 
+
+
+
+
 Object.defineProperty(Element.prototype, 'documentOffsetTop', {
    get: function () {
       return this.offsetTop + (this.offsetParent ? this.offsetParent.documentOffsetTop : 0);
    }
 });
-
 
 links.forEach( link => link.addEventListener('click', function(e){
    var targetTop = document.getElementById(this.dataset.target).documentOffsetTop;
