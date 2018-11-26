@@ -19,7 +19,6 @@ Object.defineProperty(Element.prototype, "documentOffsetTop", {
   }
 });
 
-// console.log(btmMenu.documentOffsetTop, ' ' ,window.scrollY);
 
 links.forEach(link =>
   link.addEventListener("click", function(e) {
