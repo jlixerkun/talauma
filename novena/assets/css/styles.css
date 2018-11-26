@@ -791,17 +791,5 @@ footer {
 
 .villancicos-list {
   list-style-type: none; }
-  .villancicos-list li {
-    user-select: none;
-    display: flex;
-    align-items: center; }
-    .villancicos-list li .bullet {
-      margin-right: 16px; }
-    .villancicos-list li a {
-      color: #d74f33;
-      display: block;
-      line-height: 50px;
-      height: 50px;
-      width: 100%; }
-      .villancicos-list li a:hover {
-        color: #c4ac30; }
+  .villancicos-list li::before {
+    content: ''; }
