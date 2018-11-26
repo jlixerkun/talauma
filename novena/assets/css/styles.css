@@ -796,6 +796,7 @@ footer {
     display: flex;
     align-items: center; }
     .villancicos-list li .bullet {
+      width: 32px;
       margin-right: 16px; }
     .villancicos-list li a {
       color: #d74f33;
