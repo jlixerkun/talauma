@@ -592,7 +592,9 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 0.6em; }
+  font-size: 0.6em;
+  max-width: 500px;
+  margin: 0 auto; }
   .counter .slot {
     flex: 1;
     display: flex;
@@ -604,6 +606,10 @@ header {
     width: 50px; }
     .counter .slot span {
       font-size: 5em; }
+
+#rezar {
+  max-width: 500px;
+  margin: 0 auto; }
 
 .butt {
   display: flex;
