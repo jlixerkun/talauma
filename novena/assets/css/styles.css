@@ -609,7 +609,8 @@ header {
 
 #rezar {
   max-width: 500px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  color: #d74f33; }
 
 .butt {
   display: flex;
