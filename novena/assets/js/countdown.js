@@ -1,6 +1,12 @@
-var xmas = 'December 25, 2018 00:00';
-var endDate = new Date('December 25, 2018 00:00');
-var primaNovena = new Date (' December 24, 2018 19:54');
+let today = new Date();
+let thisYear = today.getFullYear();
+let thisMonth = today.getMonth();
+let thisDay = today.getDate();
+
+if(thisMonth == 11 && thisDay > 24) thisYear += 1;
+console.log(thisDay, thisMonth);
+
+var endDate = new Date('December 25, ' + thisYear + ' 00:00');
 var url;
 setInterval(function(){
     let timeLeft = (parseInt(endDate - Date.now())/1000);
